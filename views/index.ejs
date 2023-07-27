@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DailyService</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: gilroy;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+.log{
+  height: 45px;
+}
+      .wrapper1 {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+      }
+
+      .joboy-ctn {
+        background-color: #fafafa;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .joboy-ctn > h1 {
+        font-size: 22px;
+        padding: 5px;
+      }
+
+      .card-ctn {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card {
+        width: 190px;
+        height: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-shrink: 0;
+        border: none;
+      }
+
+      .card-img-ctn {
+        height: 80%;
+        width: 80%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .card-img-ctn > img {
+        height: 40%;
+        width: 40%;
+        object-fit: contain;
+      }
+
+      .circle-ctn {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        animation: anim 10s linear infinite both;
+      }
+
+      @keyframes anim {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .circle_1 {
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        background-color: rgba(128, 128, 128, 0.1);
+      }
+
+      .circle_2 {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: rgba(128, 128, 128, 0.1);
+      }
+
+      .card-text {
+        font-weight: bolder;
+        font-size: 15px;
+        border-left: 2px solid rgba(128, 128, 128, 0.5);
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: 20%;
+      }
+
+      .card-ctn :first-child > :nth-child(2) {
+        border: none;
+      }
+
+      @media (max-width: 400px) {
+        .joboy-ctn {
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .card {
+          height: 150px;
+          width: 150px;
+        }
+
+        .card-text {
+          font-size: 12px;
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: gilroy !important;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      .wrapper {
+        height: 100%;
+        width: 100%;
+      }
+
+      .sub-head {
+        text-align: center;
+        padding: 2vw;
+      }
+
+      .service-ctn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+        padding: 1vw;
+        flex-wrap: wrap;
+      }
+
+      .service-ctn > a {
+        text-decoration: none;
+        color: black;
+        border: 2px solid rgba(128, 128, 128, 0.1);
+      }
+
+      .service {
+        height: 250px;
+        width: 300px;
+        background-color: white;
+      }
+
+      .img-card {
+        height: 80%;
+        width: 100%;
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      }
+
+      .img-card > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+      }
+
+      .img-card:hover .image {
+        scale: 1.2;
+      }
+
+      .service-title {
+        height: 20%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .frontimg {
+        width: 100%;
+      }
+      #ok {
+        height: 30%;
+        width: 100%;
+      }
+      #imgcent {
+        /* height: 100%; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .maindiv {
+        height: 50%;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+      }
+      .maindiv img {
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 70%;
+      }
+       #imgcent{
+        background-color: rgb(255, 255, 255);
+        height: 40%;
+       }
+      #imgcent img{
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <%include ./partials/navbar.ejs%>
+      <!-- <img class="img" src="static/images/front.png" alt="New York"> -->
+      <img src="static/images/front1.png" class="frontimg" alt="" />
+      <main>
+        <h2 class="sub-head">List of services</h2>
+        <div class="service-ctn">
+          <a href="/service/Cleaning-Services">
+            <div class="service">
+              <div class="img-card">
+                <img
+                  src="static/images/1.png"
+                  alt="service-image"
+                  class="image"
+                />
+              </div>
+              <div class="service-title"><h6>Home Cleaning</h6></div>
+            </div>
+          </a>
+          <a href="/service/Electrician">
+            <div class="service">
+              <div class="img-card">
+                <img
+                  src="static/images/2.png"
+                  alt="service-image"
+                  class="image"
+                />
+              </div>
+              <div class="service-title"><h6>Electrician</h6></div>
+            </div>
+          </a>
+          <a href="/service/Beauty-Salon">
+            <div class="service">
+              <div class="img-card">
+                <img
+                  src="static/images/3.png"
+                  alt="service-image"
+                  class="image"
+                />
+              </div>
+              <div class="service-title"><h6>Beauty Salon</h6></div>
+            </div>
+          </a>
+          <a href="/service/Home-Tutor">
+            <div class="service">
+              <div class="img-card">
+                <img
+                  src="static/images/4.png"
+                  alt="service-image"
+                  class="image"
+                />
+              </div>
+              <div class="service-title"><h6>Home Tutor</h6></div>
+            </div>
+          </a>
+          <a href="/service/Painter">
+            <div class="service">
+              <div class="img-card">
+                <img
+                  src="static/images/5.png"
+                  alt="service-image"
+                  class="image"
+                />
+              </div>
+              <div class="service-title"><h6>Painter</h6></div>
+            </div>
+          </a>
+          <a href="/service/Physiotherapy">
+            <div class="service">
+              <div class="img-card">
+                <img
+                  src="static/images/6.png"
+                  alt="service-image"
+                  class="image"
+                />
+              </div>
+              <div class="service-title"><h6>Physiotherapy</h6></div>
+            </div>
+          </a>
+          <a href="/service/Digital-Marketing">
+            <div class="service">
+              <div class="img-card">
+                <img
+                  src="static/images/7.png"
+                  alt="service-image"
+                  class="image"
+                />
+              </div>
+              <div class="service-title"><h6>Digital Marketing</h6></div>
+            </div>
+          </a>
+          <a href="/service/Home-Move">
+            <div class="service">
+              <div class="img-card">
+                <img
+                  src="static/images/8.png"
+                  alt="service-image"
+                  class="image"
+                />
+              </div>
+              <div class="service-title"><h6>Home Move</h6></div>
+            </div>
+          </a>
+        </div>
+      </main>
+      <div class="maindiv">
+        <img src="static/images/3img2.png" class="3img" alt="" />
+      </div>
+      <div class="wrapper1">
+        <div class="joboy-ctn">
+          <h1>WHY HOMEBUDDY?</h1>
+          <div class="card-ctn">
+            <div class="card">
+              <div class="card-img-ctn">
+                <img
+                  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/On-Demand-Scheduled.webp"
+                  alt="img"
+                />
+                <div class="circle-ctn">
+                  <div class="circle_1"></div>
+                  <div class="circle_2"></div>
+                </div>
+              </div>
+              <div class="card-text">
+                <span
+                  >ON DEMAND / <br />
+                  SCHEDULED</span
+                >
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-ctn">
+                <img
+                  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Verified-Partners.webp"
+                  alt="img"
+                />
+                <div class="circle-ctn">
+                  <div class="circle_1"></div>
+                  <div class="circle_2"></div>
+                </div>
+              </div>
+              <div class="card-text"><span>VERIFIED PARTNERS</span></div>
+            </div>
+            <div class="card">
+              <div class="card-img-ctn">
+                <img
+                  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Service-Warranty.webp"
+                  alt="img"
+                />
+                <div class="circle-ctn">
+                  <div class="circle_1"></div>
+                  <div class="circle_2"></div>
+                </div>
+              </div>
+              <div class="card-text"><span>SERVICE WARRANTY</span></div>
+            </div>
+            <div class="card">
+              <div class="card-img-ctn">
+                <img
+                  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Transparent-Pricing.webp"
+                  alt="img"
+                />
+                <div class="circle-ctn">
+                  <div class="circle_1"></div>
+                  <div class="circle_2"></div>
+                </div>
+              </div>
+              <div class="card-text"><span>TRANSPARENT PRICING</span></div>
+            </div>
+            <div class="card">
+              <div class="card-img-ctn">
+                <img
+                  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Online-Payments.webp"
+                  alt="img"
+                />
+                <div class="circle-ctn">
+                  <div class="circle_1"></div>
+                  <div class="circle_2"></div>
+                </div>
+              </div>
+              <div class="card-text"><span>ONLINE PAYMENTS</span></div>
+            </div>
+            <div class="card">
+              <div class="card-img-ctn">
+                <img
+                  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/customer-support.webp"
+                  alt="img"
+                />
+                <div class="circle-ctn">
+                  <div class="circle_1"></div>
+                  <div class="circle_2"></div>
+                </div>
+              </div>
+              <div class="card-text"><span>SUPPORT</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="imgcent">
+        <img src="static/images/back.png" class="frontimg" id="ok" alt="" />
+      </div>
+      <%include ./partials/about.ejs%>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js
+    "></script>
+  </body>
+</html>

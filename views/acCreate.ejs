@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <title>Create New Account</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: gilroy;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      .mainCtn {
+        height: 100%;
+        width: 100%;
+        background-color: #fafafa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .img-ctn {
+        padding-top: 3vw;
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* overflow: hidden; */
+        /* background-color: yellow; */
+        /* border: 2px solid red; */
+      }
+
+      .img-ctn > img {
+        height: 75%;
+        width: 75%;
+        /* object-fit: cover; */
+        object-position: center;
+      }
+
+      .accCreateSec {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 3vw;
+        flex-direction: column;
+      }
+
+      .wrapper {
+        padding: 0vw 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 74%;
+        width: 70%;
+        background-color: white;
+        border: 1px solid rgba(128, 128, 128, 0.5);
+      }
+
+      .wrapper h1 {
+        font-size: 2vw;
+        font-family: gilroy;
+        /* letter-spacing: 0.2vw; */
+      }
+
+      .wrapper form {
+        margin: 1vw 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+
+      .wrapper form input {
+        width: 20vw;
+        height: 5.5vh;
+        margin: 0vw 0vw 0.7vw 0vw;
+        background-color: #fafafa;
+        /* border: 1px solid rgba(128, 128, 128, 0.5); */
+        outline: none;
+        padding-left: 0.8vw;
+        border-radius: 3px;
+        cursor: pointer;
+        border: 1px solid black;
+      }
+
+      .wrapper form p {
+        text-align: center;
+        font-size: 0.8vw;
+        color: gray;
+        margin: 1.5vw;
+      }
+
+      #btn {
+        background-color: #2543ed;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 1vw;
+        border: none;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        color: rgb(128, 128, 128);
+        font-size: 0.9vw;
+      }
+
+      #loginLink {
+        height: 10%;
+        width: 70%;
+        background-color: white;
+        border: 1px solid rgba(128, 128, 128, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1vh;
+        font-size: 1vw;
+      }
+
+      #loginLink > a {
+        text-decoration: none;
+        color: #0095f6;
+        font-weight: 500;
+      }
+
+      @media (max-width: 500px) {
+        .img-ctn {
+          display: none;
+        }
+
+        .accCreateSec {
+          margin-top: 8vw;
+          width: 100%;
+        }
+
+        .wrapper {
+          width: 80%;
+        }
+
+        .wrapper h1 {
+          font-size: 8vw;
+        }
+
+        .wrapper form input {
+          width: 65vw;
+          height: 6vh;
+          margin: 0vw 0vw 3vw 0vw;
+          padding-left: 2vw;
+        }
+
+        .wrapper form p {
+          text-align: center;
+          font-size: 2.5vw;
+          color: gray;
+          margin: 4vw 10vw;
+        }
+
+        #btn {
+          font-size: 3vw;
+        }
+
+        #loginLink {
+          width: 80%;
+          font-size: 3vw;
+        }
+
+        footer {
+          font-size: 2vw;
+          text-align: center;
+        }
+      }
+
+      @media (max-height: 400px) {
+        .wrapper form input {
+          margin: 0vw 0vw 0.7vw 0vw;
+          height: 6vw;
+        }
+
+        .wrapper form p {
+          margin: 1vw 5vw;
+        }
+      }
+      .img-ctn img{
+        height: 60%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainCtn">
+      <div class="img-ctn">
+        <img src="../images/4141223.jpg" alt="" />
+      </div>
+      <div class="accCreateSec">
+        <div class="wrapper">
+          <h1>Create New Account</h1>
+          <form action="/register" method="post">
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Full Name"
+            />
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <input
+              type="text"
+              id="email"
+              name="mobileNumber"
+              placeholder="Phone Number"
+            />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Username"
+            />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+            />
+            <p>
+              By creating account, you agree our <b>Terms</b>,
+              <b>Privacy Policy</b> and <b>Cookies Policy</b>.
+            </p>
+            <input type="submit" id="btn" value="Create Account" />
+          </form>
+        </div>
+        <div id="loginLink">
+          Have an account?&nbsp;<a href="/acLogin">Log in</a>
+        </div>
+      </div>
+      <footer>Copyright &copy; 2023 UrbanCart.Com. All rights reserved.</footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  </body>
+</html>
